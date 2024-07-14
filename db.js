@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-//define mongodb connection URL
-const mongoURL = 'mongodb://localhost:27017/mydatabase'
+//define mongodb connection URL in computer
+// const mongoURL =process.env.MONGODB_URL_LOCAL
+
+//define mongodb connection URL in altas Online
+const mongoURL=process.env.DB_URL;
 
 //set up mongoDb connection
 mongoose.connect(mongoURL,{
